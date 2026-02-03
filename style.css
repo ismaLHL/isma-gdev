@@ -513,90 +513,100 @@ main {
 	border-color: rgba(19, 78, 74, 0.5);
 }
 
-/* Engine Specific Tags */
+/* Engine Specific Tags (Subtle/Premium) */
 .tag-unreal {
-	/* Unreal: Dark/Black Theme */
-	background: rgba(10, 10, 10, 0.6);
+	/* Unreal: Warm Dark Grey */
+	background: rgba(40, 40, 40, 0.3);
 	color: #e5e5e5;
-	border-color: rgba(255, 255, 255, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .tag-unity {
-	/* Unity: Grey Theme */
-	background: rgba(60, 60, 60, 0.6);
-	color: #e5e5e5;
-	border-color: rgba(200, 200, 200, 0.3);
+	/* Unity: Cool Slate Grey */
+	background: rgba(51, 65, 85, 0.3);
+	color: #cbd5e1;
+	border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .tag-godot {
-	/* Godot: Blue/Teal Theme */
-	background: rgba(51, 85, 128, 0.6);
-	color: #a5d3fc;
-	border-color: rgba(71, 140, 191, 0.5);
+	/* Godot: Muted Blue/Teal */
+	background: rgba(56, 189, 248, 0.15);
+	color: #7dd3fc;
+	border: 1px solid rgba(56, 189, 248, 0.3);
 }
 
-/* Language Specific Tags (No Gray) */
+/* Language Specific Tags (Subtle) */
 .tag-cpp {
-	/* C++: Deep Blue */
-	background: rgba(0, 66, 126, 0.5);
-	color: #bfdbfe;
-	border-color: rgba(0, 89, 156, 0.5);
+	/* C++: Deep Blue (Muted) */
+	background: rgba(37, 99, 235, 0.15);
+	color: #93c5fd;
+	border: 1px solid rgba(37, 99, 235, 0.3);
 }
 
 .tag-csharp {
-	/* C#: Purple */
-	background: rgba(104, 33, 122, 0.5);
-	color: #e9d5ff;
-	border-color: rgba(137, 51, 158, 0.5);
+	/* C#: Purple (Muted) */
+	background: rgba(147, 51, 234, 0.15);
+	color: #d8b4fe;
+	border: 1px solid rgba(147, 51, 234, 0.3);
 }
 
 .tag-blueprint {
-	/* Blueprint: Cyan/Light Blue */
-	background: rgba(13, 109, 145, 0.5);
-	color: #cffafe;
-	border-color: rgba(34, 211, 238, 0.5);
+	/* Blueprint: Cyan (Muted) */
+	background: rgba(6, 182, 212, 0.15);
+	color: #67e8f9;
+	border: 1px solid rgba(6, 182, 212, 0.3);
 }
 
+/* Categories (Subtle) */
 .tag-platform {
-	/* Blue for Platforms */
-	background: rgba(30, 58, 138, 0.4);
-	color: var(--c-blue-200);
-	border-color: rgba(30, 58, 138, 0.5);
+	/* Blue-Grey */
+	background: rgba(59, 130, 246, 0.1);
+	color: #bfdbfe;
+	border-color: rgba(59, 130, 246, 0.2);
 }
 
 .tag-design {
-	/* Orange for Design (GD/LD) */
-	background: rgba(124, 45, 18, 0.4);
-	color: #fed7aa;
-	border-color: rgba(124, 45, 18, 0.5);
+	/* Warm Orange */
+	background: rgba(249, 115, 22, 0.15);
+	color: #fdba74;
+	border-color: rgba(249, 115, 22, 0.3);
 }
 
 .tag-network {
-	/* Green for Network */
-	background: rgba(6, 78, 59, 0.4);
-	color: #a7f3d0;
-	border-color: rgba(6, 78, 59, 0.5);
+	/* Emerald Green */
+	background: rgba(16, 185, 129, 0.15);
+	color: #6ee7b7;
+	border-color: rgba(16, 185, 129, 0.3);
 }
 
 .tag-physics {
-	/* Red for Physics */
-	background: rgba(127, 29, 29, 0.4);
-	color: var(--c-red-200);
-	border-color: rgba(127, 29, 29, 0.5);
+	/* Rose/Red */
+	background: rgba(244, 63, 94, 0.15);
+	color: #fda4af;
+	border-color: rgba(244, 63, 94, 0.3);
 }
 
 .tag-optimization {
-	/* Teal for Optimization */
-	background: rgba(19, 78, 74, 0.4);
-	color: #99f6e4;
-	border-color: rgba(19, 78, 74, 0.5);
+	/* Teal */
+	background: rgba(20, 184, 166, 0.15);
+	color: #5eead4;
+	border-color: rgba(20, 184, 166, 0.3);
 }
 
 .tag-visuals {
-	/* Purple for VFX/Shaders/Juiciness */
-	background: rgba(88, 28, 135, 0.4);
-	color: var(--c-purple-200);
-	border-color: rgba(88, 28, 135, 0.5);
+	/* Purple/Fuchsia */
+	background: rgba(192, 38, 211, 0.15);
+	color: #f0abfc;
+	border-color: rgba(192, 38, 211, 0.3);
+}
+
+/* STANDOUT TAG */
+.tag-genai {
+	/* Vivid Pink/Fuchsia Gradient or Solid to stand out */
+	background: rgba(219, 39, 119, 0.25);
+	color: #fbcfe8;
+	border: 1px solid #db2777;
+	box-shadow: 0 0 10px rgba(219, 39, 119, 0.2);
 }
 
 .card-body {
