@@ -21,25 +21,37 @@
 	<div class="app-container">
 
 		<!-- Header -->
-		<header>
+		<header style="position: relative;">
+			<div class="lang-switcher">
+				<button id="btn-en" class="lang-btn active" data-lang="en">
+					EN
+				</button>
+				<button id="btn-fr" class="lang-btn" data-lang="fr">
+					FR
+				</button>
+			</div>
+
 			<div class="header-content">
+
+
 				<div class="profile-info">
 					<div class="badge">
 						<span class="dot"></span>
-						TECH GAME DESIGNER & PROGRAMMER
+						<span data-i18n="header.badge">TECH GAME DESIGNER & PROGRAMMER</span>
 					</div>
 					<h1>Ismail LAHLOU</h1>
-					<h2>
+					<h2 data-i18n="header.title">
 						<i data-lucide="code" class="icon-md hidden-mobile"></i>
 						Game Developer <br> Spécialiste Game Feel & Network
 					</h2>
-					<p class="tagline">Expert en développement d'expériences satisfaisantes, physique custom et
+					<p class="tagline" data-i18n="header.subtitle">Expert en développement d'expériences satisfaisantes,
+						physique custom et
 						réplication réseau. Je
 						transforme le code en sensation de jeu.</p>
 
 					<div class="cta-group">
 						<a href="mailto:isma.gdev@gmail.com" class="btn btn-primary">
-							<i data-lucide="mail"></i> Me contacter
+							<i data-lucide="mail"></i> <span data-i18n="nav.contact">Me contacter</span>
 						</a>
 						<a href="https://isma-lhl.itch.io/" target="_blank" class="btn btn-secondary">
 							<i data-lucide="gamepad-2"></i> Itch.io
@@ -50,29 +62,33 @@
 					</div>
 				</div>
 
-				<div class="stats-grid">
-					<div class="stat-card hover-red">
-						<div class="stat-header">
-							<span class="stat-title">Unreal Engine</span>
-							<i data-lucide="code" class="stat-icon red"></i>
+				<div class="header-right">
+					<div class="stats-grid">
+						<div class="stat-card hover-red">
+							<div class="stat-header">
+								<span class="stat-title">Unreal Engine</span>
+								<i data-lucide="code" class="stat-icon red"></i>
+							</div>
+							<div class="stat-desc">C++, Blueprint, Network, Physics, TechArt</div>
 						</div>
-						<div class="stat-desc">C++, Blueprint, Network, Physics, TechArt</div>
-					</div>
-					<div class="stat-card hover-purple">
-						<div class="stat-header">
-							<span class="stat-title">Unity / Godot</span>
-							<i data-lucide="layers" class="stat-icon purple"></i>
+						<div class="stat-card hover-purple">
+							<div class="stat-header">
+								<span class="stat-title">Unity / Godot</span>
+								<i data-lucide="layers" class="stat-icon purple"></i>
+							</div>
+							<div class="stat-desc">C#, Network, Physics, TechArt</div>
 						</div>
-						<div class="stat-desc">C#, Network, Physics, TechArt</div>
-					</div>
-					<div class="stat-card full-width hover-yellow">
-						<div class="stat-header yellow-text">
-							<i data-lucide="zap" class="stat-icon-sm yellow"></i>
-							<span class="stat-title">Expertise Game Feel</span>
+						<div class="stat-card full-width hover-yellow">
+							<div class="stat-header yellow-text">
+								<i data-lucide="zap" class="stat-icon-sm yellow"></i>
+								<span class="stat-title" data-i18n="header.expertise">Expertise Game Feel</span>
+							</div>
+							<div class="stat-desc">3C, GameFeel, Custom Physics, Network, TechArt</div>
 						</div>
-						<div class="stat-desc">3C, GameFeel, Custom Physics, Network, TechArt</div>
 					</div>
+
 				</div>
+
 			</div>
 		</header>
 
@@ -86,7 +102,7 @@
 
 			<!-- Filter Section -->
 			<div class="filter-container">
-				<button class="filter-btn active" data-filter="all">Tous</button>
+				<button class="filter-btn active" data-filter="all" data-i18n="filter.all">Tous</button>
 				<button class="filter-btn" data-filter="Unreal Engine">Unreal Engine</button>
 				<button class="filter-btn" data-filter="Unity">Unity</button>
 				<button class="filter-btn" data-filter="Godot">Godot</button>
@@ -108,7 +124,8 @@
 						<div class="card-header">
 							<div class="header-text">
 								<h3>GRAVITY STRIKERS</h3>
-								<p class="context">Respark Studio (Co-fondateur) - Technical Game Feel Director</p>
+								<p class="context" data-i18n="project.gravity.context">Respark Studio (Co-fondateur) -
+									Technical Game Feel Director</p>
 							</div>
 						</div>
 
@@ -137,32 +154,39 @@
 						</div>
 
 						<div class="card-body">
-							<p class="description">Fast-FPS compétitif multijoueur centré sur des mécaniques de grappin
+							<p class="description" data-i18n="project.gravity.desc">Fast-FPS compétitif multijoueur
+								centré sur des mécaniques de grappin
 								et de sport. Jeu disponible sur Steam! En tant que Game Feel Director, j'ai supervisé la
 								sensation de vitesse et
 								l'impact des interactions.</p>
 
 							<div class="key-achievements">
 								<div class="achievements-title">
-									<i data-lucide="zap"></i> Réalisations Clés
+									<i data-lucide="zap"></i> <span data-i18n="achievements.title">Réalisations
+										Clés</span>
 								</div>
-								<p class="role"><span class="label">Rôle :</span> Game Feel Director, Network & Gameplay
+								<p class="role" data-i18n="project.gravity.role"><span class="label">Rôle :</span> Game
+									Feel Director, Network & Gameplay
 									Programmer</p>
 								<ul>
-									<li>Développement C++/Blueprint d'une physique custom de grappin fluide</li>
-									<li>Logique de réplication complexe (Character Movement & Prediction) sur UE 5.4
+									<li data-i18n="project.gravity.li1">Développement C++/Blueprint d'une physique
+										custom de grappin fluide</li>
+									<li data-i18n="project.gravity.li2">Logique de réplication complexe (Character
+										Movement & Prediction) sur UE 5.4
 									</li>
-									<li>Implémentation des 3C et des systèmes de Juiciness (Camera shake, VFX feedback)
+									<li data-i18n="project.gravity.li3">Implémentation des 3C et des systèmes de
+										Juiciness (Camera shake, VFX feedback)
 									</li>
-									<li>Conception d'outils d'accessibilité (Swing Assist) et playtesting intensif</li>
+									<li data-i18n="project.gravity.li4">Conception d'outils d'accessibilité (Swing
+										Assist) et playtesting intensif</li>
 								</ul>
 							</div>
 						</div>
 
 						<div class="card-footer">
 							<a href="https://www.respark-studio.com/" target="_blank" class="btn-link">
-								<i data-lucide="globe"></i> Site Web <i data-lucide="external-link"
-									class="small-icon"></i>
+								<i data-lucide="globe"></i> <span data-i18n="btn.website">Site Web</span> <i
+									data-lucide="external-link" class="small-icon"></i>
 							</a>
 							<a href="https://store.steampowered.com/app/4268240/Gravity_Strikers/" target="_blank"
 								class="btn-link">
@@ -180,7 +204,8 @@
 						<div class="card-header">
 							<div class="header-text">
 								<h3>PROMPT GUN</h3>
-								<p class="context">Stage R&D GenAI chez OhBiBi - 2023</p>
+								<p class="context" data-i18n="project.prompt.context">Stage R&D GenAI chez OhBiBi - 2023
+								</p>
 							</div>
 						</div>
 
@@ -202,18 +227,24 @@
 						</div>
 
 						<div class="card-body">
-							<p class="description">Résultat de 3 mois de prototypage sur les IA génératives. Le Prompt
+							<p class="description" data-i18n="project.prompt.desc">Résultat de 3 mois de prototypage sur
+								les IA génératives. Le Prompt
 								Gun permet de métamorphoser et associer des objets en temps réel via des prompts. Projet
 								présenté lors de la ProEvolutionSociety (AFJV).</p>
 							<div class="key-achievements">
-								<div class="achievements-title"><i data-lucide="zap"></i> Réalisations Clés</div>
-								<p class="role"><span class="label">Rôle :</span> Programmation Gameplay, Intégration IA
+								<div class="achievements-title"><i data-lucide="zap"></i> <span
+										data-i18n="achievements.title">Réalisations Clés</span></div>
+								<p class="role" data-i18n="project.prompt.role"><span class="label">Rôle :</span>
+									Programmation Gameplay, Intégration IA
 									& VFX</p>
 								<ul>
-									<li>Métamorphose et modification d'objets par IA (input prompt joueur)</li>
-									<li>Implémentation de la mécanique 'Gravity Gun' et du FPS Controller</li>
-									<li>Développement de Shaders de morphing et VFX</li>
-									<li>Conférencier sur le sujet 'IA Générative et Jeux Vidéo'</li>
+									<li data-i18n="project.prompt.li1">Métamorphose et modification d'objets par IA
+										(input prompt joueur)</li>
+									<li data-i18n="project.prompt.li2">Implémentation de la mécanique 'Gravity Gun' et
+										du FPS Controller</li>
+									<li data-i18n="project.prompt.li3">Développement de Shaders de morphing et VFX</li>
+									<li data-i18n="project.prompt.li4">Conférencier sur le sujet 'IA Générative et Jeux
+										Vidéo'</li>
 								</ul>
 							</div>
 						</div>
@@ -221,13 +252,13 @@
 						<div class="card-footer">
 							<a href="https://afjv.com/news/11370_ia-generative-jeux-video-potentiel-defis-ethiques.htm"
 								target="_blank" class="btn-link">
-								<i data-lucide="globe"></i> Conférence & Article AFJV <i data-lucide="external-link"
-									class="small-icon"></i>
+								<i data-lucide="globe"></i> <span data-i18n="btn.conf">Conférence & Article AFJV</span>
+								<i data-lucide="external-link" class="small-icon"></i>
 							</a>
 							<a href="https://www.linkedin.com/feed/update/urn:li:activity:7080605929448054784/"
 								target="_blank" class="btn-link">
-								<i data-lucide="globe"></i> Article LinkedIn OhBiBi <i data-lucide="external-link"
-									class="small-icon"></i>
+								<i data-lucide="globe"></i> <span data-i18n="btn.article">Article LinkedIn OhBiBi</span>
+								<i data-lucide="external-link" class="small-icon"></i>
 							</a>
 						</div>
 					</div>
@@ -240,7 +271,8 @@
 						<div class="card-header">
 							<div class="header-text">
 								<h3>CÉNOTAPHE DE TURENNE</h3>
-								<p class="context">Publié sur le site de la BNF (Passerelles) - 2024/2025</p>
+								<p class="context" data-i18n="project.cenotaphe.context">Publié sur le site de la BNF
+									(Passerelles) - 2024/2025</p>
 							</div>
 						</div>
 						<div class="video-container youtube-facade"
@@ -262,31 +294,38 @@
 							<span class="tag tag-optimization">Optimization</span>
 						</div>
 						<div class="card-body">
-							<p class="description">Jeu d'exploration 3D commandé pour le site 'Passerelles' de la
+							<p class="description" data-i18n="project.cenotaphe.desc">Jeu d'exploration 3D commandé pour
+								le site 'Passerelles' de la
 								Bibliothèque nationale de France. Conception et développement complet du gameplay sur
 								Unity pour une expérience WebGL fluide.</p>
 							<div class="key-achievements">
-								<div class="achievements-title"><i data-lucide="zap"></i> Réalisations Clés</div>
-								<p class="role"><span class="label">Rôle :</span> Gameplay Programmer, Game Designer &
+								<div class="achievements-title"><i data-lucide="zap"></i> <span
+										data-i18n="achievements.title">Réalisations Clés</span></div>
+								<p class="role" data-i18n="project.cenotaphe.role"><span class="label">Rôle :</span>
+									Gameplay Programmer, Game Designer &
 									Technical Artist</p>
 								<ul>
-									<li>Optimisation pointue pour WebGL (Mesh batching, Profiling, gestion mémoire)</li>
-									<li>Conception et intégration des 3C, effets de caméra dynamiques et Juiciness</li>
-									<li>Gestion de la dette technique et collaboration (Artiste, Producer, Sound
+									<li data-i18n="project.cenotaphe.li1">Optimisation pointue pour WebGL (Mesh
+										batching, Profiling, gestion mémoire)</li>
+									<li data-i18n="project.cenotaphe.li2">Conception et intégration des 3C, effets de
+										caméra dynamiques et Juiciness</li>
+									<li data-i18n="project.cenotaphe.li3">Gestion de la dette technique et collaboration
+										(Artiste, Producer, Sound
 										Designer)</li>
-									<li>Design de contrôles accessibles (One-finger gameplay)</li>
+									<li data-i18n="project.cenotaphe.li4">Design de contrôles accessibles (One-finger
+										gameplay)</li>
 								</ul>
 							</div>
 						</div>
 						<div class="card-footer">
 							<a href="https://passerelles.essentiels.bnf.fr/fr/chronologie/construction/4d347386-eb4e-490d-873b-8f2cf607da13-cenotaphe-turenne/article/32f11137-634b-45b0-9bfa-4515b48d7f5e-cenotaphe-turenne-jeu-exploration-apres-etienne-louis-boullee"
 								target="_blank" class="btn-link">
-								<i data-lucide="globe"></i> Jouer sur le site de la BNF <i data-lucide="external-link"
-									class="small-icon"></i>
+								<i data-lucide="globe"></i> <span data-i18n="btn.play_bnf">Jouer sur le site de la
+									BNF</span> <i data-lucide="external-link" class="small-icon"></i>
 							</a>
 							<a href="https://nadkteam.itch.io/cenotaphe-turenne" target="_blank" class="btn-link">
-								<i data-lucide="gamepad-2"></i> Page Itch.io <i data-lucide="external-link"
-									class="small-icon"></i>
+								<i data-lucide="gamepad-2"></i> <span data-i18n="btn.itch">Page Itch.io</span> <i
+									data-lucide="external-link" class="small-icon"></i>
 							</a>
 						</div>
 					</div>
@@ -299,7 +338,7 @@
 						<div class="card-header">
 							<div class="header-text">
 								<h3>GYARU ULTIMATE REVENGE</h3>
-								<p class="context">Projet Étudiant - RPG & Glisse</p>
+								<p class="context" data-i18n="project.gyaru.context">Projet Étudiant - RPG & Glisse</p>
 							</div>
 						</div>
 						<div class="video-container youtube-facade" data-youtube-id="26EwqV4E0Pk">
@@ -319,25 +358,31 @@
 							<span class="tag tag-juiciness">Juiciness</span>
 						</div>
 						<div class="card-body">
-							<p class="description">Un mélange unique de RPG et de jeu de skate où l'exploration se fait
+							<p class="description" data-i18n="project.gyaru.desc">Un mélange unique de RPG et de jeu de
+								skate où l'exploration se fait
 								sur une chaise de bureau. Focus total sur le Game Feel et la fluidité de mouvement type
 								'Tony Hawk'.</p>
 							<div class="key-achievements">
-								<div class="achievements-title"><i data-lucide="zap"></i> Réalisations Clés</div>
-								<p class="role"><span class="label">Rôle :</span> Programmation 3C, Physique & Juiciness
+								<div class="achievements-title"><i data-lucide="zap"></i> <span
+										data-i18n="achievements.title">Réalisations Clés</span></div>
+								<p class="role" data-i18n="project.gyaru.role"><span class="label">Rôle :</span>
+									Programmation 3C, Physique & Juiciness
 								</p>
 								<ul>
-									<li>Physique de véhicule custom (Chaise de bureau) avec wall-sliding vertical</li>
-									<li>Animations procédurales par code (roues indépendantes) pour un réalisme accru
+									<li data-i18n="project.gyaru.li1">Physique de véhicule custom (Chaise de bureau)
+										avec wall-sliding vertical</li>
+									<li data-i18n="project.gyaru.li2">Animations procédurales par code (roues
+										indépendantes) pour un réalisme accru
 									</li>
-									<li>Système de tricks et de grind sur le mobilier urbain</li>
+									<li data-i18n="project.gyaru.li3">Système de tricks et de grind sur le mobilier
+										urbain</li>
 								</ul>
 							</div>
 						</div>
 						<div class="card-footer">
 							<a href="https://ethisc.itch.io/gyaru-ultimate-revenge" target="_blank" class="btn-link">
-								<i data-lucide="gamepad-2"></i> Page Itch.io <i data-lucide="external-link"
-									class="small-icon"></i>
+								<i data-lucide="gamepad-2"></i> <span data-i18n="btn.itch">Page Itch.io</span> <i
+									data-lucide="external-link" class="small-icon"></i>
 							</a>
 						</div>
 					</div>
@@ -350,7 +395,8 @@
 						<div class="card-header">
 							<div class="header-text">
 								<h3>GAMBLE & RUMBLE</h3>
-								<p class="context">Projet Étudiant - 2 mois - 2023</p>
+								<p class="context" data-i18n="project.gamble.context">Projet Étudiant - 2 mois - 2023
+								</p>
 							</div>
 						</div>
 						<div class="video-container youtube-facade" data-youtube-id="qaFBIPpfxRI">
@@ -368,23 +414,29 @@
 							<span class="tag tag-platform">Mobile</span>
 						</div>
 						<div class="card-body">
-							<p class="description">Jeu de cartes en ligne basé sur les paris et le bluff. Prédisez les
+							<p class="description" data-i18n="project.gamble.desc">Jeu de cartes en ligne basé sur les
+								paris et le bluff. Prédisez les
 								actions de votre adversaire et prenez des risques pour remporter le match.</p>
 							<div class="key-achievements">
-								<div class="achievements-title"><i data-lucide="zap"></i> Réalisations Clés</div>
-								<p class="role"><span class="label">Rôle :</span> Gameplay Network, GD, VFX, Juiciness &
+								<div class="achievements-title"><i data-lucide="zap"></i> <span
+										data-i18n="achievements.title">Réalisations Clés</span></div>
+								<p class="role" data-i18n="project.gamble.role"><span class="label">Rôle :</span>
+									Gameplay Network, GD, VFX, Juiciness &
 									Animations</p>
 								<ul>
-									<li>Architecture réseau et synchronisation multijoueur</li>
-									<li>Design et implémentation des mécaniques de bluff</li>
-									<li>Polishing visuel (Juiciness) et animations dynamiques</li>
+									<li data-i18n="project.gamble.li1">Architecture réseau et synchronisation
+										multijoueur</li>
+									<li data-i18n="project.gamble.li2">Design et implémentation des mécaniques de bluff
+									</li>
+									<li data-i18n="project.gamble.li3">Polishing visuel (Juiciness) et animations
+										dynamiques</li>
 								</ul>
 							</div>
 						</div>
 						<div class="card-footer">
 							<a href="https://youtu.be/VAcuE4pNEuY?si=I0QahQ0CXh8FPosV" target="_blank" class="btn-link">
-								<i data-lucide="globe"></i> Walkthrough <i data-lucide="external-link"
-									class="small-icon"></i>
+								<i data-lucide="globe"></i> <span data-i18n="btn.walkthrough">Walkthrough</span> <i
+									data-lucide="external-link" class="small-icon"></i>
 							</a>
 						</div>
 					</div>
@@ -397,7 +449,7 @@
 						<div class="card-header">
 							<div class="header-text">
 								<h3>NO TRAIN NO GAIN</h3>
-								<p class="context">Projet Étudiant - 2 mois - 2023</p>
+								<p class="context" data-i18n="project.train.context">Projet Étudiant - 2 mois - 2023</p>
 							</div>
 						</div>
 						<div class="video-container youtube-facade" data-youtube-id="7tZD7ZQtgL4">
@@ -420,28 +472,34 @@
 							<span class="tag tag-design">Level Design</span>
 						</div>
 						<div class="card-body">
-							<p class="description">Platformer 'Die n' Retry' effréné inspiré du parkour. Allez à toute
+							<p class="description" data-i18n="project.train.desc">Platformer 'Die n' Retry' effréné
+								inspiré du parkour. Allez à toute
 								vitesse, glissez et évitez les obstacles pour rattraper le train. (Equipe: 3 Devs, 8
 								Artistes, 2 Sound Designers)</p>
 							<div class="key-achievements">
-								<div class="achievements-title"><i data-lucide="zap"></i> Réalisations Clés</div>
-								<p class="role"><span class="label">Rôle :</span> Prog Gameplay, GD, Physique 2D,
+								<div class="achievements-title"><i data-lucide="zap"></i> <span
+										data-i18n="achievements.title">Réalisations Clés</span></div>
+								<p class="role" data-i18n="project.train.role"><span class="label">Rôle :</span> Prog
+									Gameplay, GD, Physique 2D,
 									CharaDesign, Level Design</p>
 								<ul>
-									<li>Moteur physique 2D personnalisé pour un contrôle fluide</li>
-									<li>Travail sur le Character Design et le Level Design</li>
-									<li>Intégration VFX et Juiciness pour le feedback joueur</li>
+									<li data-i18n="project.train.li1">Moteur physique 2D personnalisé pour un contrôle
+										fluide</li>
+									<li data-i18n="project.train.li2">Travail sur le Character Design et le Level Design
+									</li>
+									<li data-i18n="project.train.li3">Intégration VFX et Juiciness pour le feedback
+										joueur</li>
 								</ul>
 							</div>
 						</div>
 						<div class="card-footer">
 							<a href="https://isma-lhl.itch.io/no-train-no-gain" target="_blank" class="btn-link">
-								<i data-lucide="gamepad-2"></i> Jouer sur Itch.io <i data-lucide="external-link"
-									class="small-icon"></i>
+								<i data-lucide="gamepad-2"></i> <span data-i18n="btn.play_itch">Jouer sur Itch.io</span>
+								<i data-lucide="external-link" class="small-icon"></i>
 							</a>
 							<a href="https://www.youtube.com/watch?v=e3zrj0aRvOs" target="_blank" class="btn-link">
-								<i data-lucide="globe"></i> Walkthrough Level 1 <i data-lucide="external-link"
-									class="small-icon"></i>
+								<i data-lucide="globe"></i> <span data-i18n="btn.walkthrough_lvl1">Walkthrough Level
+									1</span> <i data-lucide="external-link" class="small-icon"></i>
 							</a>
 						</div>
 					</div>
@@ -454,7 +512,7 @@
 						<div class="card-header">
 							<div class="header-text">
 								<h3>TONKO</h3>
-								<p class="context">Projet Étudiant - 2 mois - 2022</p>
+								<p class="context" data-i18n="project.tonko.context">Projet Étudiant - 2 mois - 2022</p>
 							</div>
 						</div>
 						<div class="video-container youtube-facade" data-youtube-id="jLw0WUkNjnY" data-start-time="19">
@@ -475,16 +533,20 @@
 							<span class="tag tag-design">Level Design</span>
 						</div>
 						<div class="card-body">
-							<p class="description">Jeu de réflexion type Sokoban où vous incarnez un petit chef sushi
+							<p class="description" data-i18n="project.tonko.desc">Jeu de réflexion type Sokoban où vous
+								incarnez un petit chef sushi
 								empilant des ingrédients. (Equipe de 3 Développeurs)</p>
 							<div class="key-achievements">
-								<div class="achievements-title"><i data-lucide="zap"></i> Réalisations Clés</div>
-								<p class="role"><span class="label">Rôle :</span> Game Design, Prog, VFX, Juiciness, LD
+								<div class="achievements-title"><i data-lucide="zap"></i> <span
+										data-i18n="achievements.title">Réalisations Clés</span></div>
+								<p class="role" data-i18n="project.tonko.role"><span class="label">Rôle :</span> Game
+									Design, Prog, VFX, Juiciness, LD
 									& 3D Art</p>
 								<ul>
-									<li>Conception des puzzles et mécaniques d'empilement</li>
-									<li>Création des assets 3D et des effets visuels</li>
-									<li>Développement sous Godot Engine</li>
+									<li data-i18n="project.tonko.li1">Conception des puzzles et mécaniques d'empilement
+									</li>
+									<li data-i18n="project.tonko.li2">Création des assets 3D et des effets visuels</li>
+									<li data-i18n="project.tonko.li3">Développement sous Godot Engine</li>
 								</ul>
 							</div>
 						</div>
@@ -498,7 +560,7 @@
 						<div class="card-header">
 							<div class="header-text">
 								<h3>ULTRA DRIFTER</h3>
-								<p class="context">Projet Solo - 1 semaine - 2022</p>
+								<p class="context" data-i18n="project.ultra.context">Projet Solo - 1 semaine - 2022</p>
 							</div>
 						</div>
 						<div class="video-container youtube-facade" data-youtube-id="Z1J-WPu5LzA">
@@ -519,15 +581,18 @@
 							<span class="tag tag-design">Level Design</span>
 						</div>
 						<div class="card-body">
-							<p class="description">Jeu de course & drift PvP à un bouton réalisé seul.</p>
+							<p class="description" data-i18n="project.ultra.desc">Jeu de course & drift PvP à un bouton
+								réalisé seul.</p>
 							<div class="key-achievements">
-								<div class="achievements-title"><i data-lucide="zap"></i> Réalisations Clés</div>
-								<p class="role"><span class="label">Rôle :</span> Solo Dev (GD, Prog, Physique, Art, UI)
+								<div class="achievements-title"><i data-lucide="zap"></i> <span
+										data-i18n="achievements.title">Réalisations Clés</span></div>
+								<p class="role" data-i18n="project.ultra.role"><span class="label">Rôle :</span> Solo
+									Dev (GD, Prog, Physique, Art, UI)
 								</p>
 								<ul>
-									<li>Physique de véhicule 2D personnalisée (Drift)</li>
-									<li>Contrôles minimalistes 'One Button'</li>
-									<li>Gestion complète du projet en temps limité</li>
+									<li data-i18n="project.ultra.li1">Physique de véhicule 2D personnalisée (Drift)</li>
+									<li data-i18n="project.ultra.li2">Contrôles minimalistes 'One Button'</li>
+									<li data-i18n="project.ultra.li3">Gestion complète du projet en temps limité</li>
 								</ul>
 							</div>
 						</div>
@@ -539,7 +604,7 @@
 
 		<footer>
 			<div class="footer-content">
-				<h2>Prêt à créer des expériences mémorables ?</h2>
+				<h2 data-i18n="footer.title">Prêt à créer des expériences mémorables ?</h2>
 				<div class="footer-links">
 					<a href="mailto:isma.gdev@gmail.com" class="footer-link">
 						<i data-lucide="mail"></i>
@@ -554,6 +619,7 @@
 
 	</div>
 
+	<script src="translations.js"></script>
 	<script src="script.js"></script>
 </body>
 

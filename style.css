@@ -82,8 +82,9 @@ ul {
 
 /* Header */
 header {
-	padding-top: 6rem;
-	padding-bottom: 4rem;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+	/* Increased back to 3rem to fix spacing */
 }
 
 .header-content {
@@ -909,4 +910,68 @@ footer h2 {
 .youtube-facade:hover .play-button {
 	background-color: var(--c-purple-400);
 	transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Language Switcher */
+/* Header Right Column (Stats + Lang Switcher) */
+/* Header Right Column (Stats) */
+.header-right {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	align-items: flex-end;
+}
+
+/* Language Switcher */
+.lang-switcher {
+	display: flex;
+	gap: 1rem;
+	justify-content: flex-start;
+	/* Align left */
+	margin-bottom: 2rem;
+	/* Restore margin to separate from badge */
+}
+
+/* On mobile, center it if needed, but flex-start matches the grid */
+@media (max-width: 768px) {
+	.header-right {
+		align-items: center;
+		width: 100%;
+	}
+
+	.lang-switcher {
+		margin-top: 1rem;
+	}
+}
+
+.lang-btn {
+	background-color: rgba(15, 23, 42, 0.5);
+	/* Same as stat-card */
+	border: 1px solid var(--c-slate-700);
+	border-radius: var(--radius-full);
+	padding: 0.5rem 1.25rem;
+	color: var(--c-slate-400);
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.lang-btn .flag {
+	font-size: 1.25em;
+}
+
+.lang-btn:hover {
+	background-color: var(--c-slate-800);
+	color: var(--c-white);
+}
+
+.lang-btn.active {
+	background-color: rgba(234, 179, 8, 0.15);
+	/* Yellow tint */
+	border-color: var(--c-yellow-500);
+	color: var(--c-yellow-500);
+	box-shadow: 0 0 10px rgba(234, 179, 8, 0.2);
 }
