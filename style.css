@@ -292,6 +292,8 @@ h2 {
 	color: var(--c-yellow-500);
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
+	/* Ensure left alignment */
 }
 
 .stat-desc {
@@ -345,6 +347,41 @@ main {
 }
 
 /* Projects Grid */
+.filter-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-bottom: 2rem;
+	justify-content: center;
+}
+
+.filter-btn {
+	padding: 0.5rem 1rem;
+	border-radius: 9999px;
+	/* Pill shape */
+	border: 1px solid var(--c-slate-700);
+	background-color: rgba(30, 41, 59, 0.5);
+	/* Slate 800/alpha */
+	color: var(--c-slate-300);
+	font-size: 0.875rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.filter-btn:hover {
+	border-color: var(--c-orange-500);
+	color: var(--c-white);
+}
+
+.filter-btn.active {
+	background-color: var(--c-orange-500);
+	border-color: var(--c-orange-500);
+	color: white;
+	/* Contrast text */
+	box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
+}
+
 .projects-grid {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -593,7 +630,9 @@ main {
 	border-color: rgba(20, 184, 166, 0.3);
 }
 
-.tag-visuals {
+.tag-visuals,
+.tag-techart,
+.tag-juiciness {
 	/* Purple/Fuchsia */
 	background: rgba(192, 38, 211, 0.15);
 	color: #f0abfc;

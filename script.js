@@ -1,9 +1,8 @@
 // Initialize Lucide Icons
 lucide.createIcons();
 
-// Handle YouTube Facades
-// Handle Video Facades (YouTube & Vimeo)
 document.addEventListener("DOMContentLoaded", () => {
+	// --- Video Facades (YouTube & Vimeo) ---
 	const facades = document.querySelectorAll(".youtube-facade");
 
 	facades.forEach(facade => {
@@ -43,15 +42,55 @@ document.addEventListener("DOMContentLoaded", () => {
 				iframe.setAttribute("frameborder", "0");
 				iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
 				iframe.setAttribute("allowfullscreen", "");
-				
+
 				// Clear facade and append iframe
 				facade.innerHTML = "";
 				facade.appendChild(iframe);
-				facade.classList.add("video-active"); // Optional: for styling if needed
+				facade.classList.add("video-active");
 			}
 		};
 
-		// Make the entire card clickable
 		facade.addEventListener("click", loadVideo);
+	});
+
+	// --- Smart Tag Filter ---
+	const filterBtns = document.querySelectorAll(".filter-btn");
+	const projects = document.querySelectorAll(".project-card");
+
+	filterBtns.forEach(btn => {
+		btn.addEventListener("click", () => {
+			// 1. Remove active class from all buttons
+			filterBtns.forEach(b => b.classList.remove("active"));
+			// 2. Add active class to clicked button
+			btn.classList.add("active");
+
+			const filterValue = btn.getAttribute("data-filter");
+
+			projects.forEach(project => {
+				if (filterValue === "all") {
+					project.style.display = "block"; // Show all
+					project.style.opacity = "1";
+					project.style.transform = "scale(1)";
+				} else {
+					// Check if any tag inside the project matches the filter
+					// Use Array.from to convert NodeList to Array for .some()
+					const tags = Array.from(project.querySelectorAll(".tag"));
+					const hasTag = tags.some(tag => tag.textContent.trim() === filterValue);
+
+					if (hasTag) {
+						project.style.display = "block";
+						// Optional: Simple fade-in animation reset
+						project.style.opacity = "0";
+						project.style.transform = "scale(0.95)";
+						setTimeout(() => {
+							project.style.opacity = "1";
+							project.style.transform = "scale(1)";
+						}, 50);
+					} else {
+						project.style.display = "none";
+					}
+				}
+			});
+		});
 	});
 });
