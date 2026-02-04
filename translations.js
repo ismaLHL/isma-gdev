@@ -1,7 +1,7 @@
 const translations = {
 	fr: {
-		"header.badge": "TECH GAME DESIGNER & PROGRAMMER",
-		"header.title": "Game Developer <br> | Spécialiste Game Feel & Network",
+		"header.badge": "Spécialisé en Game Feel & Network",
+		"header.title": "Game Developer",
 		"header.subtitle": "Expert en développement d'expériences satisfaisantes, physique custom et réplication réseau. Je transforme le code en sensation de jeu.",
 		"nav.contact": "Me contacter",
 		"filter.all": "Tous",
@@ -76,8 +76,8 @@ const translations = {
 		"footer.title": "Prêt à créer des expériences mémorables ?"
 	},
 	en: {
-		"header.badge": "TECH GAME DESIGNER & PROGRAMMER",
-		"header.title": "Game Developer <br> | Game Feel & Network Specialist",
+		"header.badge": "Game Feel & Network Specialist",
+		"header.title": "Game Developer",
 		"header.subtitle": "Expert in developing satisfying experiences, custom physics, and network replication. I turn code into game feel.",
 		"nav.contact": "Contact Me",
 		"filter.all": "All",
