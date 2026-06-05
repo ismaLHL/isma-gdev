@@ -78,7 +78,7 @@ const translations = {
 	en: {
 		"header.badge": "Game Feel & Network Specialist",
 		"header.title": "Game Developer",
-		"header.subtitle": "Expert in developing satisfying experiences, custom physics, and network replication. I turn code into game feel.",
+		"header.subtitle": "Specialized in developing satisfying experiences, custom physics, and network replication. I turn code into game feel.",
 		"nav.contact": "Contact Me",
 		"filter.all": "All",
 		"project.gravity.context": "Respark Studio (Co-founder) - Technical Game Feel Director",
